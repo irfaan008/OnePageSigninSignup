@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#ffffff</color>
 
-    <color name="colorPrimaryTrans">#c0673AB7</color>
-    <color name="colorAccentTrans">#c0009688</color>
+    <color name="colorPrimaryTrans">#a0673AB7</color>
+    <color name="colorAccentTrans">#a0009688</color>
+    <color name="colorBlackTrans">#a0000000</color>
 </resources>

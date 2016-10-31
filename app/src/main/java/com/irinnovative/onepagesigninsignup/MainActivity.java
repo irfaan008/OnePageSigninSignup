@@ -72,6 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
         tvSignupInvoker.setVisibility(View.GONE);
         tvSigninInvoker.setVisibility(View.VISIBLE);
+        Animation translate= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.translate_right_to_left);
+        llSignup.startAnimation(translate);
+
         Animation clockwise= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_right_to_left);
         btnSignup.startAnimation(clockwise);
 
@@ -88,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
         PercentLayoutHelper.PercentLayoutInfo infoSignup = paramsSignup.getPercentLayoutInfo();
         infoSignup.widthPercent = 0.10f;
         llSignup.requestLayout();
+
+        Animation translate= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.translate_left_to_right);
+        llSignin.startAnimation(translate);
 
         tvSignupInvoker.setVisibility(View.VISIBLE);
         tvSigninInvoker.setVisibility(View.GONE);
