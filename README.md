@@ -1,8 +1,8 @@
 # OnePageSigninSignup
 Signin and Signup in single Screen using PercentRelativeLayout
 
-**Sample app**
-<img src="https://raw.githubusercontent.com/irfaan008/OnePageSigninSignup/master/onePageLoginSignup.gif" width="320" height="580"><br>
+**Sample app**<br><br>
+<img src="https://raw.githubusercontent.com/irfaan008/OnePageSigninSignup/master/onePageLoginSignup.gif"><br>
 
 **Inspiration**
 <br>
