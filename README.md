@@ -2,7 +2,7 @@
 Signin and Signup in single Screen using PercentRelativeLayout. A new way to onboard users using interactive signin and signup screen. 
 
 If you are looking for iOS version then its available here: <br>
-<a href="https://github.com/amirdew/AMLoginSignup">Click here for iOS version</a><br>
+<a href="https://github.com/amirdew/AMLoginSignup" target="_blank">Click here for iOS version</a><br>
 
 **Sample app**<br><br>
 <img src="https://raw.githubusercontent.com/irfaan008/OnePageSigninSignup/master/onePageLoginSignup.gif"><br>
