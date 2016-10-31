@@ -8,6 +8,12 @@
     android:animateLayoutChanges="true"
     tools:context="com.irinnovative.onepagesigninsignup.MainActivity">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_people" />
+
     <android.support.percent.PercentRelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -19,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorPrimaryTrans"
             android:orientation="horizontal"
             app:layout_widthPercent="90%">
 
@@ -47,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:background="@color/colorAccent"
+            android:background="@color/colorAccentTrans"
             android:orientation="horizontal"
             app:layout_widthPercent="10%">
 
