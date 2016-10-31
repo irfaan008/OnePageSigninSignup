@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context="com.irinnovative.onepagesigninsignup.MainActivity">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/llSignin"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            app:layout_widthPercent="90%">
+
+            <com.irinnovative.onepagesigninsignup.VerticalTextView
+                android:id="@+id/tvSigninInvoker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Signin"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/llSigninContent"
+                layout="@layout/layout_signin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"></include>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSignup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            app:layout_widthPercent="10%">
+
+            <com.irinnovative.onepagesigninsignup.VerticalTextView
+                android:id="@+id/tvSignupInvoker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Signup"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:visibility="visible" />
+
+            <include
+                android:id="@+id/llSignupContent"
+                layout="@layout/layout_signup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"></include>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</RelativeLayout>
