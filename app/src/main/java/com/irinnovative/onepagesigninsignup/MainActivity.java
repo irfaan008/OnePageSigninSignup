@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity {
     private void showSignupForm() {
         PercentRelativeLayout.LayoutParams paramsLogin = (PercentRelativeLayout.LayoutParams) llSignin.getLayoutParams();
         PercentLayoutHelper.PercentLayoutInfo infoLogin = paramsLogin.getPercentLayoutInfo();
-        infoLogin.widthPercent = 0.10f;
+        infoLogin.widthPercent = 0.15f;
         llSignin.requestLayout();
 
 
         PercentRelativeLayout.LayoutParams paramsSignup = (PercentRelativeLayout.LayoutParams) llSignup.getLayoutParams();
         PercentLayoutHelper.PercentLayoutInfo infoSignup = paramsSignup.getPercentLayoutInfo();
-        infoSignup.widthPercent = 0.90f;
+        infoSignup.widthPercent = 0.85f;
         llSignup.requestLayout();
 
         tvSignupInvoker.setVisibility(View.GONE);
@@ -83,13 +83,13 @@ public class MainActivity extends AppCompatActivity {
     private void showSigninForm() {
         PercentRelativeLayout.LayoutParams paramsLogin = (PercentRelativeLayout.LayoutParams) llSignin.getLayoutParams();
         PercentLayoutHelper.PercentLayoutInfo infoLogin = paramsLogin.getPercentLayoutInfo();
-        infoLogin.widthPercent = 0.90f;
+        infoLogin.widthPercent = 0.85f;
         llSignin.requestLayout();
 
 
         PercentRelativeLayout.LayoutParams paramsSignup = (PercentRelativeLayout.LayoutParams) llSignup.getLayoutParams();
         PercentLayoutHelper.PercentLayoutInfo infoSignup = paramsSignup.getPercentLayoutInfo();
-        infoSignup.widthPercent = 0.10f;
+        infoSignup.widthPercent = 0.15f;
         llSignup.requestLayout();
 
         Animation translate= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.translate_left_to_right);

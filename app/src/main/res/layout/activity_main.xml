@@ -26,13 +26,14 @@
             android:layout_alignParentLeft="true"
             android:background="@color/colorPrimaryTrans"
             android:orientation="horizontal"
-            app:layout_widthPercent="90%">
+            app:layout_widthPercent="85%">
 
             <com.irinnovative.onepagesigninsignup.VerticalTextView
                 android:id="@+id/tvSigninInvoker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:paddingTop="15dp"
                 android:text="Signin"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
@@ -53,14 +54,16 @@
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
             android:background="@color/colorAccentTrans"
+            android:gravity="center_horizontal"
             android:orientation="horizontal"
-            app:layout_widthPercent="10%">
+            app:layout_widthPercent="15%">
 
             <com.irinnovative.onepagesigninsignup.VerticalTextView
                 android:id="@+id/tvSignupInvoker"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:paddingTop="15dp"
                 android:text="Signup"
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"

@@ -7,6 +7,15 @@
     android:orientation="vertical"
     android:padding="48dp">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:scaleType="centerCrop"
+        android:paddingBottom="20dp"
+        android:src="@drawable/ic_login" />
+
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
