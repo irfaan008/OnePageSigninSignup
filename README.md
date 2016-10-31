@@ -8,3 +8,8 @@ Signin and Signup in single Screen using PercentRelativeLayout
 <br>
 Special Thanks to Yaroslav Zubko for inspiring design.<br>
 https://ios.uplabs.com/posts/7-2-log-in-sign-up
+
+
+**Contribution**
+<br>
+Feel free to improve the interface and animations. Once done, submit a pull request.
