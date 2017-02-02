@@ -38,7 +38,8 @@
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:visibility="gone" />
+                android:visibility="gone"
+                android:rotation="180"/>
 
             <include
                 android:id="@+id/llSigninContent"
