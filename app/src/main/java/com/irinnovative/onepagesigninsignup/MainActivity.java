@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private boolean isSigninScreen = true;
     private TextView tvSignupInvoker;
     private LinearLayout llSignup;
     private TextView tvSigninInvoker;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         tvSignupInvoker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isSigninScreen = false;
                 showSignupForm();
             }
         });
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         tvSigninInvoker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isSigninScreen = true;
                 showSigninForm();
             }
         });
@@ -53,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Animation clockwise= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_right_to_left);
-                btnSignup.startAnimation(clockwise);
+                if(isSigninScreen)
+                    btnSignup.startAnimation(clockwise);
             }
         });
     }
