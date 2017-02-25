@@ -23,6 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email"
+            android:inputType="textEmailAddress"
             android:textColor="#FFFFFF" />
     </android.support.design.widget.TextInputLayout>
 
@@ -36,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
+            android:inputType="textPassword"
             android:textColor="#FFFFFF" />
     </android.support.design.widget.TextInputLayout>
 
@@ -49,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Mobile Number"
+            android:inputType="phone"
             android:textColor="#FFFFFF" />
     </android.support.design.widget.TextInputLayout>
 

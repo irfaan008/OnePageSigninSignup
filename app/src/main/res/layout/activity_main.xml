@@ -38,8 +38,7 @@
                 android:textAllCaps="true"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:visibility="gone"
-                android:rotation="180"/>
+                android:visibility="gone"/>
 
             <include
                 android:id="@+id/llSigninContent"
@@ -64,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:rotation="180"
                 android:paddingTop="15dp"
                 android:text="Signup"
                 android:textAllCaps="true"
