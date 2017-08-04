@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     private boolean isSigninScreen = true;
     private TextView tvSignupInvoker;
@@ -20,12 +20,18 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayout llSignin;
     private Button btnSignup;
     private Button btnSignin;
+    LinearLayout llsignin,llsignup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        llSignin = (LinearLayout) findViewById(R.id.llSignin);
+        llSignin.setOnClickListener(this);
+        //LinearLayout singnin =(LinearLayout)findViewById(R.id.signin);
+         llsignup =(LinearLayout)findViewById(R.id.llSignup);
+        llsignup.setOnClickListener(this);
         tvSignupInvoker = (TextView) findViewById(R.id.tvSignupInvoker);
         tvSigninInvoker = (TextView) findViewById(R.id.tvSigninInvoker);
 
@@ -104,4 +110,16 @@ public class MainActivity extends AppCompatActivity {
         Animation clockwise= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.rotate_left_to_right);
         btnSignin.startAnimation(clockwise);
     }
+ @Override
+    public void onClick(View v) {
+        if(v.getId() == R.id.llSignin || v.getId() ==R.id.llSignup){
+           // Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
+            InputMethodManager methodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            methodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),0);
+
+        }
+
+    }
+
+
 }
