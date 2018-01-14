@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
@@ -13,7 +12,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/bg_people" />
 
-    <android.support.percent.PercentRelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBlackTrans"
@@ -21,12 +20,11 @@
 
         <LinearLayout
             android:id="@+id/llSignin"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
+            android:layout_weight="17"
             android:background="@color/colorPrimaryTrans"
-            android:orientation="horizontal"
-            app:layout_widthPercent="85%">
+            android:orientation="horizontal">
 
             <com.irinnovative.onepagesigninsignup.VerticalTextView
                 android:id="@+id/tvSigninInvoker"
@@ -50,13 +48,12 @@
 
         <LinearLayout
             android:id="@+id/llSignup"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_alignParentRight="true"
+            android:layout_weight="3"
             android:background="@color/colorAccentTrans"
             android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            app:layout_widthPercent="15%">
+            android:orientation="horizontal">
 
             <com.irinnovative.onepagesigninsignup.VerticalTextView
                 android:id="@+id/tvSignupInvoker"
@@ -78,7 +75,7 @@
                 android:layout_height="match_parent"
                 android:gravity="center"/>
         </LinearLayout>
-    </android.support.percent.PercentRelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

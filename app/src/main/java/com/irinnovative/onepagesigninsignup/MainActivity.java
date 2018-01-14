@@ -1,8 +1,6 @@
 package com.irinnovative.onepagesigninsignup;
 
 import android.os.Bundle;
-import android.support.percent.PercentLayoutHelper;
-import android.support.percent.PercentRelativeLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -70,15 +68,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showSignupForm() {
-        PercentRelativeLayout.LayoutParams paramsLogin = (PercentRelativeLayout.LayoutParams) llSignin.getLayoutParams();
-        PercentLayoutHelper.PercentLayoutInfo infoLogin = paramsLogin.getPercentLayoutInfo();
-        infoLogin.widthPercent = 0.15f;
+        ((LinearLayout.LayoutParams) llSignin.getLayoutParams()).weight = 0.15f;
         llSignin.requestLayout();
-
-
-        PercentRelativeLayout.LayoutParams paramsSignup = (PercentRelativeLayout.LayoutParams) llSignup.getLayoutParams();
-        PercentLayoutHelper.PercentLayoutInfo infoSignup = paramsSignup.getPercentLayoutInfo();
-        infoSignup.widthPercent = 0.85f;
+        ((LinearLayout.LayoutParams) llSignup.getLayoutParams()).weight = 0.85f;
         llSignup.requestLayout();
 
         tvSignupInvoker.setVisibility(View.GONE);
@@ -92,15 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showSigninForm() {
-        PercentRelativeLayout.LayoutParams paramsLogin = (PercentRelativeLayout.LayoutParams) llSignin.getLayoutParams();
-        PercentLayoutHelper.PercentLayoutInfo infoLogin = paramsLogin.getPercentLayoutInfo();
-        infoLogin.widthPercent = 0.85f;
+        ((LinearLayout.LayoutParams) llSignin.getLayoutParams()).weight = 0.85f;
         llSignin.requestLayout();
-
-
-        PercentRelativeLayout.LayoutParams paramsSignup = (PercentRelativeLayout.LayoutParams) llSignup.getLayoutParams();
-        PercentLayoutHelper.PercentLayoutInfo infoSignup = paramsSignup.getPercentLayoutInfo();
-        infoSignup.widthPercent = 0.15f;
+        ((LinearLayout.LayoutParams) llSignup.getLayoutParams()).weight = 0.15f;
         llSignup.requestLayout();
 
         Animation translate= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.translate_left_to_right);
