@@ -1,5 +1,6 @@
 package com.irinnovative.onepagesigninsignup;
 
+import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -68,10 +69,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showSignupForm() {
-        ((LinearLayout.LayoutParams) llSignin.getLayoutParams()).weight = 0.15f;
-        llSignin.requestLayout();
-        ((LinearLayout.LayoutParams) llSignup.getLayoutParams()).weight = 0.85f;
-        llSignup.requestLayout();
+        ValueAnimator va = ValueAnimator.ofFloat(0.15f,0.85f);
+        va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                float weight = (float) valueAnimator.getAnimatedValue();
+                ((LinearLayout.LayoutParams) llSignin.getLayoutParams()).weight = 1 - weight;
+                llSignin.requestLayout();
+                ((LinearLayout.LayoutParams) llSignup.getLayoutParams()).weight = weight;
+                llSignup.requestLayout();
+            }
+        });
+        va.setDuration(300).start();
 
         tvSignupInvoker.setVisibility(View.GONE);
         tvSigninInvoker.setVisibility(View.VISIBLE);
@@ -84,10 +93,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showSigninForm() {
-        ((LinearLayout.LayoutParams) llSignin.getLayoutParams()).weight = 0.85f;
-        llSignin.requestLayout();
-        ((LinearLayout.LayoutParams) llSignup.getLayoutParams()).weight = 0.15f;
-        llSignup.requestLayout();
+        ValueAnimator va = ValueAnimator.ofFloat(0.15f,0.85f);
+        va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                float weight = (float) valueAnimator.getAnimatedValue();
+                ((LinearLayout.LayoutParams) llSignin.getLayoutParams()).weight = weight;
+                llSignin.requestLayout();
+                ((LinearLayout.LayoutParams) llSignup.getLayoutParams()).weight = 1 - weight;
+                llSignup.requestLayout();
+            }
+        });
+        va.setDuration(300).start();
 
         Animation translate= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.translate_left_to_right);
         llSignin.startAnimation(translate);
