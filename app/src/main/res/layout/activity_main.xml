@@ -45,7 +45,7 @@
                 layout="@layout/layout_signin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"></include>
+                android:gravity="center"/>
         </LinearLayout>
 
         <LinearLayout
@@ -76,7 +76,7 @@
                 layout="@layout/layout_signup"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center"></include>
+                android:gravity="center"/>
         </LinearLayout>
     </android.support.percent.PercentRelativeLayout>
 
