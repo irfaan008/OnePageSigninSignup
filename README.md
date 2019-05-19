@@ -1,4 +1,6 @@
-# OnePageSigninSignup
+# OnePageSigninSignup 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e9d0dc6eb0e0473f9cbdbca1c8eeee8b)](https://www.codacy.com/app/irfaan008/OnePageSigninSignup?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=irfaan008/OnePageSigninSignup&amp;utm_campaign=Badge_Grade)  
+
 Signin and Signup in single Screen using PercentRelativeLayout. A new way to onboard users using interactive signin and signup screen. 
 
 If you are looking for iOS version then its available here: <br>
