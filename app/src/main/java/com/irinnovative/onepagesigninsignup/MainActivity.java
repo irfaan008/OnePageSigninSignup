@@ -1,12 +1,12 @@
 package com.irinnovative.onepagesigninsignup;
 
+import android.animation.ValueAnimator;
 import android.os.Bundle;
-import android.support.percent.PercentLayoutHelper;
-import android.support.percent.PercentRelativeLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -69,16 +69,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showSignupForm() {
-        PercentRelativeLayout.LayoutParams paramsLogin = (PercentRelativeLayout.LayoutParams) llSignin.getLayoutParams();
-        PercentLayoutHelper.PercentLayoutInfo infoLogin = paramsLogin.getPercentLayoutInfo();
-        infoLogin.widthPercent = 0.15f;
-        llSignin.requestLayout();
-
-
-        PercentRelativeLayout.LayoutParams paramsSignup = (PercentRelativeLayout.LayoutParams) llSignup.getLayoutParams();
-        PercentLayoutHelper.PercentLayoutInfo infoSignup = paramsSignup.getPercentLayoutInfo();
-        infoSignup.widthPercent = 0.85f;
-        llSignup.requestLayout();
+        ValueAnimator va = ValueAnimator.ofFloat(0.15f,0.85f);
+        va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                float weight = (float) valueAnimator.getAnimatedValue();
+                ((LinearLayout.LayoutParams) llSignin.getLayoutParams()).weight = 1 - weight;
+                llSignin.requestLayout();
+                ((LinearLayout.LayoutParams) llSignup.getLayoutParams()).weight = weight;
+                llSignup.requestLayout();
+            }
+        });
+        va.setDuration(300).start();
 
         tvSignupInvoker.setVisibility(View.GONE);
         tvSigninInvoker.setVisibility(View.VISIBLE);
@@ -91,16 +93,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void showSigninForm() {
-        PercentRelativeLayout.LayoutParams paramsLogin = (PercentRelativeLayout.LayoutParams) llSignin.getLayoutParams();
-        PercentLayoutHelper.PercentLayoutInfo infoLogin = paramsLogin.getPercentLayoutInfo();
-        infoLogin.widthPercent = 0.85f;
-        llSignin.requestLayout();
-
-
-        PercentRelativeLayout.LayoutParams paramsSignup = (PercentRelativeLayout.LayoutParams) llSignup.getLayoutParams();
-        PercentLayoutHelper.PercentLayoutInfo infoSignup = paramsSignup.getPercentLayoutInfo();
-        infoSignup.widthPercent = 0.15f;
-        llSignup.requestLayout();
+        ValueAnimator va = ValueAnimator.ofFloat(0.15f,0.85f);
+        va.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator valueAnimator) {
+                float weight = (float) valueAnimator.getAnimatedValue();
+                ((LinearLayout.LayoutParams) llSignin.getLayoutParams()).weight = weight;
+                llSignin.requestLayout();
+                ((LinearLayout.LayoutParams) llSignup.getLayoutParams()).weight = 1 - weight;
+                llSignup.requestLayout();
+            }
+        });
+        va.setDuration(300).start();
 
         Animation translate= AnimationUtils.loadAnimation(getApplicationContext(),R.anim.translate_left_to_right);
         llSignin.startAnimation(translate);
